@@ -1,26 +1,59 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react';
+
 
 const Product = () => {
+    const [quantity, setQuantity] = useState(1);
+    const product = {
+        name: 'Product Name',
+        price: '$19.99',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget...',
+        category: 'Category Name',
+        imageUrl: 'https://via.placeholder.com/300x300', // Replace with your product image URL
+      };
+      const handleQuantityChange = (value) => {
+        setQuantity(Math.max(1, quantity + value)); // Ensure quantity is not less than 1
+      };
+
+      const addToCart = () => {
+        console.log(`Added ${quantity} ${product.name} to the cart`);
+      };
   return (
-    <section className='w-full md:py-20'>
-        <div className='w-full max-w-[1280px] px-5 md:px-10 mx-auto'>
-            <div className='flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]'>
-            <div className='w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0'>
-                left column
-            </div>
-            <div className='flex-[1] py-3'>
-                <div className='text-[34px] font-semibold mb-2 leading-tight'>
-                Product Name
-                </div>
-                <div className="text-lg font-semibold mb-5">
-                Product Description
-                </div>
-            </div>
-            </div>
+    <div className="container mx-auto py-8 px-6 mt-24">
+    <div className="flex flex-col md:flex-row">
+      <div className="md:w-1/2">
+        <img src={product.imageUrl} alt={product.name} className="w-full h-auto" />
+      </div>
+      <div className="md:w-1/2 md:pl-8">
+        <h1 className="text-3xl font-semibold mb-4">{product.name}</h1>
+        <p className="text-lg text-gray-600 mb-4">{product.price}</p>
+        <p className="text-sm text-gray-500 mb-4">{product.description}</p>
+        <div className="flex items-center mb-4">
+          <button
+            className="bg-blue-500 text-white px-3 py-1 mr-2"
+            onClick={() => handleQuantityChange(-1)}
+          >
+            -
+          </button>
+          <span className="text-xl">{quantity}</span>
+          <button
+            className="bg-blue-500 text-white px-3 py-1 rounded-full ml-2"
+            onClick={() => handleQuantityChange(1)}
+          >
+            +
+          </button>
         </div>
-    </section>
+        <button
+          className="bg-blue-700 text-white px-4 py-2 rounded-full mb-4"
+          onClick={addToCart}
+        >
+          Add to Cart
+        </button>
+        <p className="text-sm text-gray-500">Category: {product.category}</p>
+      </div>
+    </div>
+  </div>
   )
 }
 
