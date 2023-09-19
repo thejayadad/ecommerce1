@@ -2,7 +2,7 @@ import React from 'react'
 
 const Newsletter = () => {
     const backgroundImageUrl =
-    'https://images.pexels.com/photos/439818/pexels-photo-439818.jpeg';
+    'https://images.pexels.com/photos/1737955/pexels-photo-1737955.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
   return (
     <section
     className='py-0 md:py-24 bg-center bg-cover flex justify-center  items-center'

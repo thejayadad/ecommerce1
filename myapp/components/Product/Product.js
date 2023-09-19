@@ -48,7 +48,7 @@ const products = [
 
 const Product = () => {
   return (
-    <section className="py-12 bg-gray-100">
+    <section className="py-12 bg-gray-100 px-6">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-semibold text-gray-800 mb-8">Encore Collection</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
