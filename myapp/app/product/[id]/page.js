@@ -31,21 +31,21 @@ const Product = () => {
         <p className="text-sm text-gray-500 mb-4">{product.description}</p>
         <div className="flex items-center mb-4">
           <button
-            className="bg-blue-500 text-white px-3 py-1 mr-2"
+            className="bg-zinc-500 text-white px-3 py-1 mr-2"
             onClick={() => handleQuantityChange(-1)}
           >
             -
           </button>
           <span className="text-xl">{quantity}</span>
           <button
-            className="bg-blue-500 text-white px-3 py-1 rounded-full ml-2"
+            className="bg-zinc-500 text-white px-3 py-1 ml-2"
             onClick={() => handleQuantityChange(1)}
           >
             +
           </button>
         </div>
         <button
-          className="bg-blue-700 text-white px-4 py-2 rounded-full mb-4"
+          className="bg-zinc-700 text-white px-4 py-2 mb-4"
           onClick={addToCart}
         >
           Add to Cart
