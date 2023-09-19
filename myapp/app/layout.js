@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar/Navbar'
 import './globals.css'
 import Footer from '@/components/Footer/Footer'
+import Subscribe from '@/components/Subscribe/Subscribe'
 
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Subscribe />
         <Navbar />
         {children}
         <Footer />
