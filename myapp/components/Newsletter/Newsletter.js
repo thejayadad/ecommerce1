@@ -21,7 +21,7 @@ const Newsletter = () => {
         <input className='px-4 py-2 rounded-sm' placeholder='First Name' />
         <input className='px-4 py-2 rounded-sm' placeholder='Last Name' />
         <input className='px-4 py-2 rounded-sm' placeholder='Email' />
-        <input className='px-4 py-2 bg-blue-700 w-[300px] rounded-sm' type='submit'  />
+        <input className='px-4 py-2 bg-blue-700 w-[250px] rounded-sm' type='submit'  />
 
     </form>
     </div>
