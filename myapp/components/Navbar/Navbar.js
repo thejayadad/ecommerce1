@@ -11,7 +11,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
-    <header className='w-screen h-12 md:h-14 bg-zinc-50 flex items-center justify-center fixed top-8 left-0 z-[100]'>
+    <header className='w-screen h-12 md:h-14 bg-zinc-50 flex items-center justify-center fixed top-8 left-0 z-[100] p-4'>
       <div className='w-full max-w-7xl flex justify-between items-center px-4'>
         <div className='flex items-center'>
           <Image
@@ -36,7 +36,7 @@ const Navbar = () => {
         <div className='flex items-center justify-end md:justify-between md:w-fit'>
         <FaShoppingCart className='text-lg text-zinc-500' />
           <span
-          className='text-lg md:text-2xl text-zinc-900 ml-5 md:ml-6'
+          className='text-sm md:text-sm text-zinc-900 ml-2 md:ml-2 py-1 px-4 bg-blue-700 rounded-sm cursor-pointer hover:bg-blue-900 hover:text-white'
           >Logout</span>
         </div>
       </div>
