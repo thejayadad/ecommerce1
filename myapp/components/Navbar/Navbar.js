@@ -19,7 +19,7 @@ const Navbar = () => {
             src={logo}
             className='flex mr-4 md:mr-0 h-[68px] w-[68px] md:h=[50px] md:w-[55px]'
           />
-          <div className='flex h-10 w-[1px] bg-zinc-400 mx-5'></div>
+          <div className='flex h-10 w-[1px] bg-zinc-400 mx-5 '></div>
           <Link
           href={'/'}
           className='hover:no-underline'
